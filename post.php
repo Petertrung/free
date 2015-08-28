@@ -20,7 +20,7 @@ $company = mysqli_real_escape_string($link, $_POST['company']);
 
 $sql = "INSERT INTO `spin it`.`jobpost` (`id`, `title`, `job`, `des`, `location`, `date`, `company`) VALUES (NULL, '$title','$job','$des','$location', NULL,'$company');";
 if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
+    header('location: job.php');
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

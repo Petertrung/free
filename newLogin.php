@@ -26,7 +26,7 @@
   <div class="container">
     <header class="major">
       <h2>Login</h2>
-    <form>
+    
       <?php  
       if(!isset($_SESSION['uid'])){
       echo"<form action='login.php' method='post'>
@@ -37,19 +37,19 @@
       }else{
           echo "<p>You are logged in as ".$_SESSION['email']."<a href='logout.php'>Log Out</a>";
              if ($_SESSION['type'] == 0){
-          echo"<a href='accountCompany.php'><button type='button'>Account</button></a>";
+          echo"<a href='accountCompany.php'></br><button type='button' class='button special'>Account</button></a>";
         }else{
-          echo"<a href='account.php'><button type='button'>Account</button></a>";
+          echo"<a href='account.php'></br><button type='button' class='button special'>Account</button></a>";
         }
-        }
+      }
 
 
 
 
       ?>
-    </form>
   </div>
   </section>
+  <div id="footer2">
   <footer id="footer">
     <ul class="icons">
       <li>
@@ -67,6 +67,7 @@
       </ul>
       <p align="middle">Spinit Connect | Copyright 2015</p>
   </footer>
+</div>
   
 </body>
 </html>

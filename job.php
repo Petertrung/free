@@ -21,6 +21,10 @@
         </ul>
         </nav>
     </header>
+     <section class="wrapper">
+  <div class="container">
+    <header class="major">
+    <h2>Jobs</h2>
     <?php 
     $host ="localhost";
 for ($i=0; $i < 70; $i++) { 
@@ -31,10 +35,6 @@ for ($i=0; $i < 70; $i++) {
     $name = mysql_query("SELECT * FROM company WHERE id = '3'");
     $query = mysql_query("SELECT * FROM jobpost WHERE id = '$i'");
     $numrows = mysql_num_rows($query);
-    while ($row = mysql_fetch_assoc($name) ) {
-                $dbname = $row['companyName'];
-                echo "$dbname";
-            }
     if($numrows!==0){
         while($row = mysql_fetch_assoc($query)){
             $dbid = $row['id'];
@@ -79,6 +79,8 @@ echo "<form action='post.php' method='post'>
 // mysqli_close($connect);
 
 ?>
+ </div>
+  </section>
 
 <footer id="footer" class="footer3">
     <ul class="icons">
